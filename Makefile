@@ -7,6 +7,9 @@ lint:
 format:
 	black *.py
 
+test:
+	pytest -v
 run:
 	python app.py
 
+all: setup lint format test run
